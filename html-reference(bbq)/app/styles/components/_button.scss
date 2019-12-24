@@ -1,0 +1,98 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+/**/
+
+button,
+.button {
+  @include transition($transition-time--base all ease-in-out);
+  position: relative;
+  display: inline-block;
+  margin: 0 0 2rem;
+  padding: $button--vertical-padding $button--horizontal-padding;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $color--accent-contrast;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background-color: $color--accent;
+  font-size: 0.75rem;
+  font-weight: $font-weight--semibold;
+  &:hover {
+    color: $color--accent-contrast;
+    background-color: darken($color--accent, 5%);
+  }
+  &.button--rounded {
+    border-radius: 1.5rem;
+  }
+  &.button--outline {
+    color: $color--accent;
+    border: 1px solid $color--accent;
+    background: $color--white;
+    &:hover {
+      color: darken($color--accent, 5%);
+      border-color: darken($color--accent, 5%);
+    }
+  }
+  &.button--text {
+    color: $color--black;
+    border: none;
+    background: transparent;
+  }
+  &.button--small {
+    padding: $button--vertical-padding - 0.5rem $button--horizontal-padding - 0.5rem;
+  }
+  &.button--big {
+    padding: $button--vertical-padding + 0.5rem $button--horizontal-padding + 0.5rem;
+  }
+}
+.button--atc {
+  margin-bottom: 0;
+  padding: 8px 10px;
+  color: $color--white;
+  border-radius: 20px;
+  background: $color--submit-button;
+  font-size: $font-size--xxs;
+  font-weight: $font-weight--semibold;
+}
+.button--submit {
+  padding: 15px 20px;
+  border-radius: 50px;
+}
+.button--icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0;
+  padding: 0;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  font-size: 0;
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+}
+.button--signin {
+  margin-bottom: 0;
+  padding: 16px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: url("../assets/images/user.svg") no-repeat right center !important;
+  background-size: 20px !important;
+}
+.button--icon-text {
+  padding: 7px 15px 7px 35px;
+  border-radius: 50px;
+}
+.button--edit {
+  padding: 0.55rem 1.5rem;
+  color: $color--accent;
+  border: 1px solid $color--accent;
+  border-radius: 50px;
+  background: transparent;
+}

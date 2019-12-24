@@ -1,0 +1,10 @@
+{# index.twig #}
+{% extends "src/layout/layout.twig" %}
+{% set pageName = 'Profile' %}
+
+{% block content %}
+
+  {% include "src/partials/components/includes/profile.twig" %}
+  {% include "src/partials/components/includes/menu_wrap.twig" %}
+  <script type="text/javascript" src="scripts/user-profile.js" defer='defer'></script>
+{% endblock %}

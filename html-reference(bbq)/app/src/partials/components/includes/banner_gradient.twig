@@ -1,0 +1,48 @@
+<div class="banner-block row align-center">
+    <div class="layout-container">
+        <div class="banner-content row align-center space-between">
+            <div class="card-carousel">
+                <div>
+                    {% embed "../modules/card.twig" %}
+                        {% set variant = 'gradient' %}
+                        {% set sub_variant = 'white' %}
+                        {% set title = 'BBQ Veggie Meal for Four' %}
+                        {% set imageUrl = '../assets/images/Mask Group 5.jpg' %}
+                        {% set price = '3600' %}
+                        {% set ctaURL = 'index.html' %}
+                        {% set ctaText = 'Buy now' %}
+                        {% set cardOffer = 'Limited offer' %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed "../modules/card.twig" %}
+                        {% set variant = 'gradient' %}
+                        {% set sub_variant = 'black' %}
+                        {% set title = 'BBQ Veggie Meal for Four' %}
+                        {% set imageUrl = '../assets/images/Mask Group 5.jpg' %}
+                        {% set price = '3600' %}
+                        {% set ctaURL = 'index.html' %}
+                        {% set ctaText = 'Buy now' %}
+                        {% set cardOffer = 'Limited offer' %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed "../modules/card.twig" %}
+                        {% set variant = 'gradient' %}
+                        {% set sub_variant = 'white' %}
+                        {% set title = 'BBQ Veggie Meal for Four' %}
+                        {% set imageUrl = '../assets/images/Mask Group 5.jpg' %}
+                        {% set price = '3600' %}
+                        {% set ctaURL = 'index.html' %}
+                        {% set ctaText = 'Buy now' %}
+                        {% set cardOffer = 'Limited offer' %}
+                    {% endembed %}
+                </div>
+            </div>
+            {% embed "../modules/formBanner.twig" %}
+                {% set title = 'Let us serve you better' %}
+                {% set description = 'Don’t wait in a line to enjoy your meal. Reserve a table in advance with us.' %}
+            {% endembed %}
+        </div>
+    </div>
+</div>

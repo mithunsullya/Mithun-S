@@ -1,0 +1,74 @@
+<div class="reservation__card--single">
+  <div class="reservation__card--thumbnail">
+    <img src="{{image}}" alt="">
+    <div class="reservation__card--details">
+      <div class="reservation-location">
+        <p>{{title}}</p>
+      </div>
+      <div class="reservation-date">
+        <img src="../assets/images/calendar.svg" alt="">
+        <p>{{date}}</p>
+      </div>
+      <div class="reservation-contact">
+        <div class="branch-direction">
+          <img src="../assets/images/direction.svg" alt="">
+          <p>Direction</p>
+        </div>
+        <div class="branch-contact">
+          <img src="../assets/images/call.svg" alt="">
+          <p>Contact</p>
+        </div>
+        <div class="branch-share">
+          <img src="../assets/images/share.svg" alt="">
+          <p>Share</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reservation__card--content">
+    <div class="ref-key">
+      Reff
+      <span>{{ref}}</span>
+    </div>
+
+    <div class="menu-order">
+      <p>
+        Veg Bbq Buffet
+        <span>(1)</span>
+      </p>
+      <p>
+        Veg Bbq Buffet
+        <span>(1)</span>
+      </p>
+    </div>
+    <div class="bbq-points">
+      <span>BBQN Points added</span>
+      <span>{{bbqPoints}}</span>
+    </div>
+    <div class="total-cost">
+      <span>Total Estimated</span>
+      <span>{{estimationCost}}</span>
+    </div>
+    {% if not isPastReservation %}
+      <div class="total-cost">
+        <span>Advance Amount Paid</span>
+        <span>{{advancePayment}}</span>
+      </div>
+    {% endif %}
+    {% if isPastReservation %}
+      <div class="card-action">
+        <a href="#">
+          RESERVE AGAIN
+        </a>
+        <a href="#">ADD REVIEW</a>
+      </div>
+    {% else %}
+      <div class="card-action">
+        <a href="#">
+          CANCEL
+        </a>
+        <a href="#">RESHEDULE</a>
+      </div>
+    {% endif %}
+  </div>
+</div>

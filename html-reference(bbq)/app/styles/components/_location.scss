@@ -1,0 +1,124 @@
+.location {
+  position: relative;
+  cursor: pointer;
+
+  &.show {
+    .arrow-down {
+      transform: rotate(180deg);
+    }
+  }
+
+  &--text {
+    padding: 0 10px;
+    white-space: nowrap;
+    width: 160px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    @include bp-xs-small() {
+      min-width: 100px;
+      max-width: 140px;
+    }
+
+    @include bp-medium() {
+      width: 100px;
+    }
+
+    @include bp-large() {
+      width: 160px;
+    }
+  }
+
+  &--dropdown {
+    @include bp-xs-small {
+      right: auto;
+      width: 100vw;
+      left: 0;
+    }
+
+    position: absolute;
+    top: calc(100% + 5px);
+    display: none;
+    left: 50px;
+    width: 340px;
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 12px;
+    overflow: hidden;
+    min-height: 440px;
+
+    &.show {
+      display: block;
+    }
+
+    .select-items {
+      margin-top: 15px;
+      padding: 10px;
+      box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      max-height: 220px;
+      overflow: hidden;
+      overflow-y: auto;
+
+      div {
+        font-size: 12px;
+        padding: 8px 0;
+        border: none;
+
+        &:hover {
+          background: transparent;
+        }
+      }
+
+      .same-as-selected {
+        background: transparent;
+      }
+    }
+
+    .location--dropdown-title {
+      margin-top: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &-card {
+    margin-top: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+
+    .location-nearby--icon {
+      height: 20px;
+      width: 20px;
+      background: url('../../assets/images/Untitled-1-10.svg') no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    .location-nearby--content {
+      margin-left: 10px;
+
+      p {
+        color: #FC4412;
+        font-weight: 600;
+      }
+
+      span {
+        color: #364044;
+        opacity: 0.6;
+        font-size: 10px;
+        display: flex;
+        margin: 3px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

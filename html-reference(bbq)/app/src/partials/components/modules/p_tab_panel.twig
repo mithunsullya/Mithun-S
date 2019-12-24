@@ -1,0 +1,132 @@
+<div class="paragraph__tab-panel" id="tabs">
+    <ul class="row">
+        <li>
+            <a href="#tab-1">
+                {{ tab1 }}
+            </a>
+        </li>
+        <li>
+            <a href="#tab-2">
+                {{ tab2 }}
+            </a>
+        </li>
+        <li>
+            <a href="#tab-3">
+                {{ tab3 }}
+            </a>
+        </li>
+        <li>
+            <a href="#tab-4">
+                {{ tab4 }}
+            </a>
+        </li>
+    </ul>
+    <div id="tab-1" class="paragraph__tab-panel--block row space-between">
+        <div class="paragraph__tab-panel--left">
+            {% if tabTitle != NULL %}
+                <div class="paragraph__title">
+                    {{ tabTitle }}
+                </div>
+            {% endif %}
+            {% if tabContent != NULL %}
+                <div class="paragraph__content">
+                    {{ tabContent }}
+                </div>
+            {% endif %}
+            {% if ctaURL != NULL %}
+                {% if ctaText != NULL %}
+                    <div class="paragraph__cta">
+                        <a href="{{ ctaURL }}">
+                            {{ ctaText }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+        <div class="paragraph__tab-panel--right">
+            <img src="{{ imgURL }}" alt="">
+        </div>
+    </div>
+    <div id="tab-2" class="paragraph__tab-panel--block row space-between">
+        <div class="paragraph__tab-panel--left">
+            {% if tabTitle != NULL %}
+                <div class="paragraph__title">
+                    {{ tabTitle }}
+                </div>
+            {% endif %}
+            {% if tabContent != NULL %}
+                <div class="paragraph__content">
+                    {{ tabContent }}
+                </div>
+            {% endif %}
+            {% if ctaURL != NULL %}
+                {% if ctaText != NULL %}
+                    <div class="paragraph__cta">
+                        <a href="{{ ctaURL }}">
+                            {{ ctaText }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+        <div class="paragraph__tab-panel--right">
+            <img src="{{ imgURL }}" alt="">
+        </div>
+    </div>
+    <div id="tab-3" class="paragraph__tab-panel--block row space-between">
+        <div class="paragraph__tab-panel--left">
+            {% if tabTitle != NULL %}
+                <div class="paragraph__title">
+                    {{ tabTitle }}
+                </div>
+            {% endif %}
+            {% if tabContent != NULL %}
+                <div class="paragraph__content">
+                    {{ tabContent }}
+                </div>
+            {% endif %}
+            {% if ctaURL != NULL %}
+                {% if ctaText != NULL %}
+                    <div class="paragraph__cta">
+                        <a href="{{ ctaURL }}">
+                            {{ ctaText }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+        <div class="paragraph__tab-panel--right">
+            <img src="{{ imgURL }}" alt="">
+        </div>
+    </div>
+    <div id="tab-4" class="paragraph__tab-panel--block row space-between">
+        <div class="paragraph__tab-panel--left">
+            {% if tabTitle != NULL %}
+                <div class="paragraph__title">
+                    {{ tabTitle }}
+                </div>
+            {% endif %}
+            {% if tabContent != NULL %}
+                <div class="paragraph__content">
+                    {{ tabContent }}
+                </div>
+            {% endif %}
+            {% if ctaURL != NULL %}
+                {% if ctaText != NULL %}
+                    <div class="paragraph__cta">
+                        <a href="{{ ctaURL }}">
+                            {{ ctaText }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+        <div class="paragraph__tab-panel--right">
+            <img src="{{ imgURL }}" alt="">
+        </div>
+    </div>
+</div>

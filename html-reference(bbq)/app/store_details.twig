@@ -1,0 +1,221 @@
+{% extends "src/layout/layout.twig" %}
+{% set pageName = "Store Detail" %}
+
+{% block content %}
+  <div class="sticky-page-wrapper">
+    <div class="banner">
+      <div class="layout-container">
+        <div class="store-info">
+          <h1>Barbeque Nation Koramangala</h1>
+          <button class="button button--icon-text button--share">Share</button>
+          <button class="button button--icon-text button--map">Direction</button>
+          <div class="social-links">
+            <a href="#" class="social-link"><img src="../assets/images/icon-fb.svg" alt=""></a>
+            <a href="#" class="social-link"><img src="../assets/images/icon-insta.svg" alt=""></a>
+            <a href="#" class="social-link"><img src="../assets/images/icon-t.svg" alt=""></a>
+            <a href="#" class="social-link"><img src="../assets/images/icon-g.svg" alt=""></a>
+            <a href="#" class="social-link"><img src="../assets/images/icon-yt.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="store-reservation-form">
+      {% embed "src/partials/components/modules/formBanner.twig" %}
+        {% set title = 'Let us serve you better' %}
+        {% set description = 'Don’t wait in a line to enjoy your meal. Reserve a table in advance with us.' %}
+      {% endembed %}
+    </div>
+    <div class="layout-container">
+      <div class="store-content">
+        <ul class="s-menu">
+          <li class="s-menu__item">
+            <a href="#overview" class="s-menu__link">Overview</a>
+          </li>
+          <li class="s-menu__item">
+            <a href="#menu" class="s-menu__link">Menu</a>
+          </li>
+          <li class="s-menu__item">
+            <a href="#offers" class="s-menu__link">Offers</a>
+          </li>
+          <li class="s-menu__item">
+            <a href="gallery" class="s-menu__link">Gallery</a>
+          </li>
+        </ul>
+        <div class="s-overview" id="overview">
+          <h2>Overview</h2>
+          <div class="s-overview__head">
+            <div class="head__address head__item">
+              <h5 class="s-title">Address</h5>
+              <p>Barbeque Nation, No. 4005, 100 Feet Rd, HAL 2nd Stage, Indira Nagar, Bangalore, Karnataka 560038</p>
+            </div>
+            <div class="head__contact head__item">
+              <h5 class="s-title">Contact</h5>
+              <p>080671 83539, +918064806060 contact@barbeque-nation.com</p>
+            </div>
+            <div class="head__fast head__item">
+              <h5 class="s-title">Opening hours</h5>
+              <p>12 PM TO 03:00 PM
+                <br>
+                06:00 PM TO 11:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <h5 class="s-title">Amenities</h5>
+        <div class="s-amenities">
+          <div class="amenity"><img src="../assets/images/wifi.svg" alt=""><span>Free Wifi</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/noun_parking area_1585952.svg" alt=""><span>Parking</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/noun_Teddy Bear_922207.svg" alt=""><span>Kids Play Area</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/noun_Bar_1919977.svg" alt=""><span>Alcohol Available</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/noun_smoking area_658297.svg" alt=""><span>Smoking Area</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/noun_Stroller_1112261.svg" alt=""><span>Baby Seating</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/outline.svg" alt=""><span>Buffet</span>
+          </div>
+          <div class="amenity"><img src="../assets/images/outdoor-cafe.svg" alt=""><span>Outside Dining</span>
+          </div>
+        </div>
+        <div class="s-menu-card" id="menu">
+          <h2>Menu</h2>
+          {% include "src/partials/components/includes/s_menu.twig" %}
+        </div>
+        <div class="s-gallery" id="gallery">
+          <h2>Gallery</h2>
+          <div class="s-gallery-wrapper">
+            <div class="s-gallery-wrap">
+              <div class="s-gallery-item"><img src="../assets/images/gallery1.png" alt="Gallery"></div>
+              <div class="s-gallery-item"><img src="../assets/images/gallery2.png" alt="Gallery"></div>
+              <div class="s-gallery-item"><img src="../assets/images/gallery3.png" alt="Gallery"></div>
+              <div class="s-gallery-item"><img src="../assets/images/gallery4.png" alt="Gallery"></div>
+            </div>
+            <div class="s-gallery-item s-gallery-item--last"><img src="../assets/images/gallery4.png" alt="Gallery">
+              <span>12 PHOTOS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="s-offers">
+    <div class="layout-container">
+      <h2>Offers & Promotions</h2>
+      <div class="events-carousel">
+        <div>
+          {% embed "src/partials/components/modules/event-card.twig" %}
+            {% set title = 'Enjoy 20% off on the any Buffet' %}
+            {% set location = 'Koramangala, Bangalore' %}
+            {% set schedule = '25 Aug, 9:00pm' %}
+            {% set description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. invidunt ut labore et.' %}
+            {% set ctaText = 'More info' %}
+            {% set image = '../assets/images/c700x420.png' %}
+          {% endembed %}
+        </div>
+        <div>
+          {% embed "src/partials/components/modules/event-card.twig" %}
+            {% set title = 'Enjoy 20% off on the any Buffet' %}
+            {% set location = 'Koramangala, Bangalore' %}
+            {% set schedule = '25 Aug, 9:00pm' %}
+            {% set description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. invidunt ut labore et.' %}
+            {% set ctaText = 'More info' %}
+            {% set image = '../assets/images/c700x420.png' %}
+          {% endembed %}
+        </div>
+        <div>
+          {% embed "src/partials/components/modules/event-card.twig" %}
+            {% set title = 'Enjoy 20% off on the any Buffet' %}
+            {% set location = 'Koramangala, Bangalore' %}
+            {% set schedule = '25 Aug, 9:00pm' %}
+            {% set description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. invidunt ut labore et.' %}
+            {% set ctaText = 'More info' %}
+            {% set image = '../assets/images/c700x420.png' %}
+          {% endembed %}
+        </div>
+        <div>
+          {% embed "src/partials/components/modules/event-card.twig" %}
+            {% set title = 'Enjoy 20% off on the any Buffet' %}
+            {% set location = 'Koramangala, Bangalore' %}
+            {% set schedule = '25 Aug, 9:00pm' %}
+            {% set description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. invidunt ut labore et.' %}
+            {% set ctaText = 'More info' %}
+            {% set image = '../assets/images/c700x420.png' %}
+          {% endembed %}
+        </div>
+        <div>
+          {% embed "src/partials/components/modules/event-card.twig" %}
+            {% set title = 'Enjoy 20% off on the any Buffet' %}
+            {% set location = 'Koramangala, Bangalore' %}
+            {% set schedule = '25 Aug, 9:00pm' %}
+            {% set description = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor. invidunt ut labore et.' %}
+            {% set ctaText = 'More info' %}
+            {% set image = '../assets/images/c700x420.png' %}
+          {% endembed %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+
+
+
+
+<div class="l-wrapper">
+  <div class="l-result">
+    <div class="l-result__view">
+
+      <div class="nearbyOutlets--card">
+        <div class="nearbyOutlets--card-details">
+          <div class="nearbyOutlets---card-details--location">
+            <a href="{{view_branch}}">{{ name }}</a>
+          </div>
+          <div class="nearbyOutlets--card-details--address">
+            {{ address }}
+          </div>
+
+          <div class="nearbyOutlets--card-details--options">
+            <ul class="row">
+              <li>
+                <a href="{{ view_branch }}#offers">
+                  <img src="themes/custom/bbq_nation/assets/images/offer.svg" alt="">
+                  <span>Offer</span>
+                </a>
+              </li>
+              <li>
+                <a href="{{ view_branch }}#menu">
+                  <img src="themes/custom/bbq_nation/assets/images/menu01.svg" alt="">
+                  <span>Menu</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://maps.google.com/?q={{ latitude }},{{longitude}}" target="_blank">
+                  <img src="themes/custom/bbq_nation/assets/images/map.svg" alt="">
+                  <span>Map</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nearbyOutlets--card-details--link">
+            <a href="{{view_branch}}" title="">
+              Explore
+              <span class="viewMore"></span>
+            </a>
+          </div>
+          <div class="nearbyOutlets--card-details--cta">
+            <a href="{{view_branch}}" title="">
+              Reserve Table
+            </a>
+          </div>
+        </div>
+        <div class="nearbyOutlets--card-image">
+          {{ branch_image__target_id }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

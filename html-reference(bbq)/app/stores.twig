@@ -1,0 +1,208 @@
+{% extends "src/layout/layout.twig" %}
+{% set pageName = "Stores" %}
+
+{% block content %}
+
+  <div class="layout-container">
+    {% embed "src/partials/components/modules/breadcrumb.twig" %}
+      {% set items = {
+          '0': {
+            'crumb': 'Home',
+            'link': '/'
+          },
+          '1': {
+            'crumb': 'Stores',
+          },
+         }
+      %}
+    {% endembed %}
+  </div>
+
+  <div class="l-wrapper">
+    <div class="l-header">
+      <div class="layout-container row">
+        <div class="header__filter hide-xs hide-sm">
+          <h3>Filters</h3>
+        </div>
+        <div class="header__result">
+          <h2>BBQN For You</h2>
+        </div>
+        <div class="header__m-filter hide-md hide-xl">
+          <button class="button--icon button--m-filter">Filter</button>
+        </div>
+      </div>
+    </div>
+    <div class="l-result">
+      <div class="layout-container row">
+        <div class="l-filter">
+          <div class="l-filter__elem-wrap">
+            <div class="l-filter__elem">
+              <label for="Location">Location</label>
+              <select name="location" id="location" class="dropdown">
+                <option value="1">India</option>
+                <option value="2">UAE</option>
+                <option value="3">Malaysia</option>
+              </select>
+              <div class="checkbox-list form-item checkbox-list--expanded">
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+                <div class="form-item__checkbox">
+                  <input type="checkbox" id="bbqn-1" name="bbqn-1" value="1">
+                  <label for="bbqn-1">Mumbai</label>
+                </div>
+              </div>
+              <div class="l-filter__submit hide-md hide-xl">
+                <button class="button button--submit">Apply</button>
+                <button class="button button--submit button--outline">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l-result__view-wrap">
+          <div class="l-result__view">
+            {% embed "src/partials/components/modules/nearby-card.twig" %}
+              {% set location = 'Indiranagar' %}
+              {% set address = 'Indiranagar 100 FT Road' %}
+              {% set discountURL = '#' %}
+              {% set menuURL = '#' %}
+              {% set navigationURL = '#' %}
+              {% set linkURL = '#' %}
+              {% set ctaURL = '#' %}
+              {% set ctaText = 'Reserve table' %}
+              {% set image = '../assets/images/live-grill.png' %}
+            {% endembed %}
+            {% embed "src/partials/components/modules/nearby-card.twig" %}
+              {% set location = 'Indiranagar' %}
+              {% set address = 'Indiranagar 100 FT Road' %}
+              {% set discountURL = '#' %}
+              {% set menuURL = '#' %}
+              {% set navigationURL = '#' %}
+              {% set linkURL = '#' %}
+              {% set ctaURL = '#' %}
+              {% set ctaText = 'Reserve table' %}
+              {% set image = '../assets/images/live-grill.png' %}
+            {% endembed %}
+            {% embed "src/partials/components/modules/nearby-card.twig" %}
+              {% set location = 'Indiranagar' %}
+              {% set address = 'Indiranagar 100 FT Road' %}
+              {% set discountURL = '#' %}
+              {% set menuURL = '#' %}
+              {% set navigationURL = '#' %}
+              {% set linkURL = '#' %}
+              {% set ctaURL = '#' %}
+              {% set ctaText = 'Reserve table' %}
+              {% set image = '../assets/images/live-grill.png' %}
+            {% endembed %}
+            {% embed "src/partials/components/modules/nearby-card.twig" %}
+              {% set location = 'Indiranagar' %}
+              {% set address = 'Indiranagar 100 FT Road' %}
+              {% set discountURL = '#' %}
+              {% set menuURL = '#' %}
+              {% set navigationURL = '#' %}
+              {% set linkURL = '#' %}
+              {% set ctaURL = '#' %}
+              {% set ctaText = 'Reserve table' %}
+              {% set image = '../assets/images/live-grill.png' %}
+            {% endembed %}
+            {% embed "src/partials/components/modules/nearby-card.twig" %}
+              {% set location = 'Indiranagar' %}
+              {% set address = 'Indiranagar 100 FT Road' %}
+              {% set discountURL = '#' %}
+              {% set menuURL = '#' %}
+              {% set navigationURL = '#' %}
+              {% set linkURL = '#' %}
+              {% set ctaURL = '#' %}
+              {% set ctaText = 'Reserve table' %}
+              {% set image = '../assets/images/live-grill.png' %}
+            {% endembed %}
+            {% embed "src/partials/components/modules/nearby-card.twig" %}
+              {% set location = 'Indiranagar' %}
+              {% set address = 'Indiranagar 100 FT Road' %}
+              {% set discountURL = '#' %}
+              {% set menuURL = '#' %}
+              {% set navigationURL = '#' %}
+              {% set linkURL = '#' %}
+              {% set ctaURL = '#' %}
+              {% set ctaText = 'Reserve table' %}
+              {% set image = '../assets/images/live-grill.png' %}
+            {% endembed %}
+          </div>
+          <div class="pager pager--loadmore" id="filter-load-more">
+            <button id="filter-load-more-button" class="button button--loadmore button--outline">Load More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

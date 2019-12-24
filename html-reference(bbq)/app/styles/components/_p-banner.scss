@@ -1,0 +1,33 @@
+.paragraph__banner {
+  // @include bp-xs-small {
+  //   margin-bottom: 30px;
+  // }
+
+  margin-bottom: 60px;
+
+  .paragraph__banner-carousel {
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+
+    &.slick-dotted {
+      margin-bottom: 0;
+    }
+
+    .slick-dots {
+      @include bp-xs-small {
+        bottom: 40px !important;
+      }
+
+      li {
+        &.slick-active {
+          button {
+            &::before {
+              background: $color--white;
+            }
+          }
+        }
+      }
+    }
+  }
+}

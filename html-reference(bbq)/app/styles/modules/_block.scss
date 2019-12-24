@@ -1,0 +1,20 @@
+/**
+* Block styling
+**/
+
+.block {
+  display: flex;
+  flex-flow: column nowrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border: 1px solid $color--whisper;
+  .block__title {
+    background: $color--whisper;
+    padding: 1rem;
+  }
+  .block__content {
+    border-top: none;
+    padding: 1rem;
+  }
+}

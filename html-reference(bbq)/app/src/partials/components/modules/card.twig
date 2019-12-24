@@ -1,0 +1,59 @@
+{% if variant == 'sidebar' %}
+    {% if sub_variant %}
+        {% set sub_var = "card--subvar-" ~ sub_variant %}
+    {% else %}
+        {% set sub_var = "" %}
+    {% endif %}
+
+    <div class="card card--variant-sidebar {{  sub_var }}">
+        <div class="card-details">
+            <div class="card-title">
+                {{ title }}
+            </div>
+            <div class="card-price">
+                <span>&#8377;</span>
+                {{ price }}
+            </div>
+            <div class="card-cta">
+                <a href="{{ ctaURL }}">
+                    {{ ctaText}}
+                </a>
+            </div>
+        </div>
+        <div class="card-offer">
+            {{ cardOffer }}
+        </div>
+        <div class="card-image">
+            <img alt="" src="{{ imageUrl }}">
+        </div>
+    </div>
+{% else %}
+    {% if sub_variant %}
+        {% set sub_var = "card--subvar-" ~ sub_variant %}
+    {% else %}
+        {% set sub_var = "" %}
+    {% endif %}
+    <div class="card card--variant-gradient {{  sub_var }}">
+        <div class="card-details">
+            <div class="card-details--left">
+                <div class="card-price">
+                    Rs.
+                    {{ price }}
+                </div>
+                <div class="card-title">
+                    {{ title }}
+                </div>
+            </div>
+            <div class="card-details--right">
+                <div class="card-cta">
+                    <a href="{{ ctaURL }}">
+                        {{ ctaText}}
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-image">
+            <img alt="" src="{{ imageUrl }}">
+        </div>
+    </div>
+{% endif %}

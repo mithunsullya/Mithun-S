@@ -1,0 +1,35 @@
+.paragraph__content-column {
+  .paragraph__content-column--header {
+    .paragraph__simple-content {
+      margin-bottom: 30px;
+    }
+  }
+
+  .paragraph__content-column--block {
+    flex-wrap: wrap;
+
+    .paragraph__col {
+      @include bp-xs-small {
+        flex: 0 0 100%;
+      }
+
+      flex: 0 0 50%;
+
+      &:nth-child(odd) {
+        @include bp-xs-small {
+          padding-right: 0;
+        }
+
+        padding-right: 32px;
+      }
+
+      &:nth-child(even) {
+        @include bp-xs-small {
+          padding-left: 0;
+        }
+
+        padding-left: 32px;
+      }
+    }
+  }
+}

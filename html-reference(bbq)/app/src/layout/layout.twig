@@ -1,0 +1,32 @@
+{% block html_head_container %}
+
+    {% include '../partials/html-header.twig' %}
+
+    {% block head %}{% endblock %}
+</head>{% endblock %}
+<body>
+    <header aria-label="Site header" class="header" id="header" role="banner">
+        <div class="layout-container">
+            {% block header %}
+                {% include "../partials/components/includes/header.twig" %}
+            {% endblock %}
+        </div>
+    </header>
+
+    <main aria-label="Site main content" class="main" id="main" role="main">
+        {% block content %}{% endblock %}
+    </main>
+    <section class="cart cart--curtain">
+        {% include "../partials/components/includes/cart.twig" %}
+    </section>
+    <section class="reservation reservation--curtain">
+        {% include "../partials/components/includes/reservation_info.twig" %}
+    </section>
+    {% include "../partials/components/includes/menu_wrap.twig" %}
+    <footer aria-label="Site footer" class="footer" id="footer" role="contentinfo">
+        {% include '../partials/footer.twig' %}
+        {% block footer %}{% endblock %}
+        {% include "../partials/components/includes/talk-to-us.twig" %}
+    </footer>
+    </body>
+</html>

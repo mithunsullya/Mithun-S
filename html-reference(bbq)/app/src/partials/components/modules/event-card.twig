@@ -1,0 +1,28 @@
+<div class="events--card">
+    <div class="events--card-details">
+        <div class="events--card-details--title">
+            {{ title }}
+        </div>
+        <div class="events--card-details--bottom">
+            <span class="location">
+                {{ location }}
+            </span>
+            |
+            <span class="schedule">
+                {{ schedule }}
+            </span>
+        </div>
+        <div class="events--card-details--description">
+            {{ description}}
+        </div>
+        <div class="events--card-details--link">
+            <a href="{{ ctaURL }}" title="">
+                {{ ctaText }}
+                <span class="viewMore"></span>
+            </a>
+        </div>
+    </div>
+    <div class="events--card-image">
+        <img src="{{ image }}" alt="">
+    </div>
+</div>

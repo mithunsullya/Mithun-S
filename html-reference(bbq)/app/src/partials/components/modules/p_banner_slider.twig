@@ -1,0 +1,42 @@
+<div class="paragraph__banner-slider row align-center">
+    <div class="layout-container">
+        <div class="paragraph__content">
+            {% if title != NULL %}
+                <div class="paragraph__title">
+                    {{ title }}
+                </div>
+            {% endif %}
+            {% if subTitle != NULL %}
+                <div class="paragraph__subtitle">
+                    {{ subTitle }}
+                </div>
+            {% endif %}
+            {% if ctaLink != NULL %}
+                {% if ctaText != NULL %}
+                    <div class="paragraph__cta">
+                        <a href="{{ ctaLink }}">
+                            {{ ctaText }}
+                        </a>
+                    </div>
+                {% endif %}
+            {% endif %}
+
+        </div>
+    </div>
+
+    {% if mediaURL != NULL %}
+        {% if mediaType == 'video' %}
+            {% set mediaClass = 'paragraph__video' %}
+        {% else %}
+            {% set mediaClass = 'paragraph__image' %}
+        {% endif %}
+        <div class="paragraph__media {{ mediaClass }}">
+            <img src="{{ mediaURL }}" alt="">
+            <video autoplay muted loop id="banner-video">
+                <source src="{{ mediaURL }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    {% endif %}
+
+</div>

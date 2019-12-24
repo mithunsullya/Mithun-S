@@ -1,0 +1,90 @@
+.paragraph__table {
+  .paragraph__table-block {
+    .paragraph__title {
+      @include bp-xs-small {
+        font-size: 18px;
+      }
+
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .paragraph__subtitle {
+      @include bp-xs-small {
+        font-size: 14px;
+      }
+
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .paragraph__table-section {
+      @include bp-xs-small {
+        margin-bottom: 50px;
+      }
+
+      margin-bottom: 70px;
+
+      .paragraph__table-content {
+        @include bp-xs-small {
+          overflow: hidden;
+          overflow-x: scroll;
+          padding: 1px;
+        }
+
+        table {
+          width: 100%;
+          margin-bottom: 0;
+          border-collapse: collapse;
+          border-radius: 10px;
+          border-style: hidden;
+          /* hide standard table (collapsed) border */
+          box-shadow: 0 0 0 1px $color--feldspar;
+          /* this draws the table border  */
+          overflow: hidden;
+
+          th,
+          td {
+            border-left: 1px solid $color--karry;
+            white-space: nowrap;
+          }
+
+          thead {
+            border-radius: 10px 10px 0 0;
+            background: rgba(228, 75, 0, 0.7);
+            color: $color--white;
+            border: none;
+            overflow: hidden;
+
+            tr {
+              th {
+                text-transform: uppercase;
+                font-weight: 600;
+              }
+            }
+          }
+
+          tbody {
+            tr {
+              td {
+                padding: 1.25rem 1rem;
+                font-weight: 500;
+
+                &:first-child {
+                  font-weight: 600;
+                  font-size: 16px;
+                }
+              }
+
+              &:nth-child(2n) {
+                background: $color--table-header;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+.close {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $color--white url("../assets/images/close.svg") no-repeat center center;
+  background-size: 10px;
+}

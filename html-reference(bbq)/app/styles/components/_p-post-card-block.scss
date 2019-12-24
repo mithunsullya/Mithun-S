@@ -1,0 +1,214 @@
+.paragraph__post-block {
+  .paragraph__post-card--block {
+    .paragraph__title {
+      @include bp-xs-small {
+        font-size: 18px;
+      }
+
+      @include bp-medium {
+        font-size: 30px;
+      }
+
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .paragraph__subtitle {
+      @include bp-xs-small {
+        font-size: 14px;
+      }
+
+      @include bp-medium {
+        font-size: 18px;
+      }
+
+      font-size: 18px;
+      line-height: 26px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .paragraph__post-section {
+      @include bp-xs-small {
+        flex-wrap: wrap;
+        padding: 0 15px;
+      }
+
+      @include bp-small {
+        flex-wrap: wrap;
+        padding: 0 15px;
+      }
+
+      @include bp-medium {
+        flex-wrap: nowrap;
+        padding: 0;
+      }
+
+      // flex-wrap: wrap;
+      margin: 0 -15px;
+
+      .paragraph__post-card {
+        @include bp-xs-small {
+          flex: 0 0 100%;
+          margin: 0 0 30px;
+        }
+
+        @include bp-small {
+          flex: 0 0 44%;
+          margin: 0 15px 30px;
+        }
+
+        @include bp-medium {
+          flex: 1;
+          margin: 0 15px 70px;
+        }
+
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+        margin: 0 15px 70px;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+
+        .paragraph__post-card--image {
+          @include bp-xs-small {
+            height: auto;
+          }
+
+          @include bp-medium {
+            height: 45%;
+          }
+
+          // height: 260px;
+          height: 45%;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .paragraph__post-card--details {
+          @include bp-xs-small {
+            height: auto;
+            // padding: 15px 15px 60px;
+            padding: 15px 15px 30px;
+          }
+
+          @include bp-medium {
+            height: 55%;
+            padding: 30px 1.5rem 60px;
+          }
+
+          padding: 30px 1.5rem 60px;
+          color: $color--profile;
+          // height: 280px;
+          height: 55%;
+
+          .paragraph__date {
+            @include bp-xs-small {
+              font-size: 10px;
+              background-position: left 1px;
+            }
+
+            @include bp-medium {
+              font-size: 12px;
+              background-position: left 3px;
+            }
+
+            font-size: 12px;
+            padding-left: 17px;
+            background: url('../../assets/images/calendar\ \(1\).svg') no-repeat;
+            background-position: left 3px;
+            background-size: 12px;
+            font-weight: 500;
+            color: rgba(31, 31, 31, 0.5);
+            margin-bottom: 20px;
+          }
+
+          .paragraph__title {
+            @include bp-xs-small {
+              font-size: 14px;
+            }
+
+            @include bp-medium {
+              font-size: 18px;
+            }
+
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            max-height: 55px;
+          }
+
+          .paragraph__content {
+            @include bp-xs-small {
+              font-size: 12px;
+              line-height: 1.8;
+              margin-bottom: 20px;
+            }
+
+            @include bp-medium {
+              font-size: 14px;
+              line-height: 28px;
+              margin-bottom: 80px;
+            }
+
+            // font-size: 16px;
+            line-height: 28px;
+            font-weight: 300;
+            max-height: 80px;
+            overflow: hidden;
+            margin-bottom: 80px;
+            opacity: 0.8;
+          }
+
+          .paragraph__cta {
+            @include bp-xs-small {
+              // left: 15px;
+              // bottom: 30px;
+              position: relative;
+              bottom: auto;
+              left: auto;
+            }
+
+            @include bp-medium {
+              position: absolute;
+              bottom: 40px;
+              left: 1.5rem;
+            }
+
+            position: absolute;
+            bottom: 40px;
+            left: 1.5rem;
+
+            a {
+              @include bp-xs-small {
+                font-size: 10px;
+              }
+
+              @include bp-medium {
+                font-size: 12px;
+              }
+
+              font-size: 12px;
+              text-transform: uppercase;
+              font-weight: 600;
+              color: $color--label;
+              background: url(../../assets/images/repeat.svg) no-repeat;
+              background-size: 12px;
+              background-position: right center;
+              padding-right: 18px;
+              transition: padding-right 0.3s ease-in-out 0s;
+
+              &:hover {
+                padding-right: 22px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

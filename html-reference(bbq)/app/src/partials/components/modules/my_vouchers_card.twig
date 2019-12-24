@@ -1,0 +1,45 @@
+<div class="vouchers__card--single">
+  <div class="vouchers__card--thumbnail">
+    <img src="{{image}}" alt="">
+    <div class="vouchers__card--details">
+      <div class="vouchers-name">
+        <p>{{title}}</p>
+      </div>
+      <div class="vouchers-price">
+        <p>{{price}}</p>
+      </div>
+    </div>
+  </div>
+  {% if status == 'active' %}
+    {% set classStatus = "active" %}
+  {% else %}
+    {% set classStatus = "" %}
+  {% endif %}
+
+  <div class="vouchers__card--content {{classStatus}}">
+    <div class="vouchers-code">
+      <p>
+        Voucher Code
+        <span>:</span>
+      </p>
+      <p>{{code}}</p>
+    </div>
+    <div class="vouchers-validty">
+      <p>
+        Validity
+        <span>:</span>
+      </p>
+      <p>{{validty}}</p>
+    </div>
+    <div class="vouchers-status">
+      <p>
+        Status
+        <span>:</span>
+      </p>
+      <p class="status-details">
+        <span class="{{status}}">{{status}}</span>
+        <span>{{giftBy}}</span>
+      </p>
+    </div>
+  </div>
+</div>

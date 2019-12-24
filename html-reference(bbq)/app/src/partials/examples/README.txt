@@ -1,0 +1,1 @@
+Use the components as per the example to use the theme functionality.

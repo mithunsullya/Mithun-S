@@ -1,0 +1,23 @@
+{% extends "src/layout/layout.twig" %}
+{% set pageName = 'Vouchers' %}
+{% block content %}
+  <div class="layout-container">
+    <div class="voucher--info">
+      <div class="voucher__wrapper">
+        <div class="content__image">
+          <div class="content__header">
+            <h1>More Details About Voucher </h1>
+          </div>
+          {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+            {% set card_image = "../assets/images/v1.png" %}
+            {% set card_header = "Meal for four" %}
+            {% set price = "3200" %}
+          {% endembed %}
+        </div>
+      </div>
+      <div class="voucher__description">
+        {% include "src/partials/components/includes/voucher_info.twig" %}</body>
+      </div>
+    </div>
+  </div>
+{% endblock %}

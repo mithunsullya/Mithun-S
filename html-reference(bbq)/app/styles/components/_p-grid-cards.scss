@@ -1,0 +1,107 @@
+.paragraph__grid-cards {
+  .paragraph__grid-card--block {
+    .paragraph__title {
+      @include bp-xs-small {
+        font-size: 18px;
+      }
+
+      @include bp-medium {
+        font-size: 30px;
+      }
+
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .paragraph__subtitle {
+      @include bp-xs-small {
+        font-size: 14px;
+      }
+
+      @include bp-medium {
+        font-size: 18px;
+      }
+
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .paragraph__grid-section {
+      @include bp-xs-small {
+        margin: 0
+      }
+
+      @include bp-medium {
+        margin: 0 -15px 40px;
+      }
+
+      flex-wrap: wrap;
+      margin: 0 -15px 40px;
+
+      .paragraph__simple-content {
+        @include bp-xs-small {
+          flex: 0 0 100%;
+          margin: 0 0 30px;
+          padding: 15px;
+        }
+
+        @include bp-small {
+          width: calc((100% - (15px * 4)) / 2);
+        }
+
+        @include bp-medium {
+          flex: auto;
+          width: calc((100% - (15px * 6)) / 3);
+          margin: 0 15px 30px;
+          padding: 40px;
+        }
+
+        width: calc((100% - (15px * 6)) / 3);
+        margin: 0 15px 30px;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+        padding: 40px;
+        border-radius: 4px;
+        border: 1px solid transparent;
+        transition: border 0.3s ease-in-out 0s;
+
+        &:hover {
+          border: 1px solid $color--feldspar;
+        }
+
+        .paragraph__subtitle {
+          @include bp-xs-small {
+            font-size: 14px;
+          }
+
+          @include bp-medium {
+            font-size: 20px;
+          }
+
+          font-size: 20px;
+        }
+
+        .paragraph__content {
+          @include bp-xs-small {
+            font-size: 12px;
+            line-height: 1.8;
+            max-height: 90px;
+          }
+
+          @include bp-medium {
+            font-size: 14px;
+            line-height: 24px;
+            max-height: 95px;
+          }
+
+          font-size: 14px;
+          line-height: 24px;
+          max-height: 95px;
+          overflow: hidden;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.paragraph__clients {
+  .paragraph__client-block {
+    .paragraph__title {
+      @include bp-xs-small {
+        font-size: 18px;
+      }
+
+      font-size: 30px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .paragraph__subtitle {
+      @include bp-xs-small {
+        font-size: 14px;
+      }
+
+      font-size: 18px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .paragraph__client-section {
+      @include bp-xs-small {
+        margin-bottom: 30px;
+      }
+
+      flex-wrap: wrap;
+      margin: 0 -10px 70px;
+
+      .paragraph__client-card {
+        @include bp-xs-small {
+          width: calc((100% - (20px * 2))/ 2);
+        }
+
+        margin: 0 10px;
+        width: calc((100% - (20px * 4))/ 4);
+        padding: 5%;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
+    }
+  }
+}

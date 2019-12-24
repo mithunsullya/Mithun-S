@@ -1,0 +1,58 @@
+<div class="paragraph__testimonial-block">
+    <div class="layout-container">
+        {% if title != NULL %}
+            <div class="paragraph__title">
+                {{ title }}
+            </div>
+        {% endif %}
+        {% if subtitle != NULL %}
+            <div class="paragraph__subtitle">
+                {{ subtitle }}
+            </div>
+        {% endif %}
+        <div class="paragraph__testimonial-carousel">
+            <div class="paragraph__testimonial-section">
+                <div>
+                    {% embed "../modules/p_testimonial_card.twig" %}
+                        {% set clientImage = '../../assets/images/pexels-photo-220453@2x.png' %}
+                        {% set clientMessage = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' %}
+                        {% set clientName = 'Rizal Gradianto' %}
+                        {% set clientDesignation = 'Co-founder of company name' %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed "../modules/p_testimonial_card.twig" %}
+                        {% set clientImage = '../../assets/images/pexels-photo-220453@2x.png' %}
+                        {% set clientMessage = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' %}
+                        {% set clientName = 'Rizal Gradianto' %}
+                        {% set clientDesignation = 'Co-founder of company name' %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed "../modules/p_testimonial_card.twig" %}
+                        {% set clientImage = '../../assets/images/pexels-photo-220453@2x.png' %}
+                        {% set clientMessage = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' %}
+                        {% set clientName = 'Rizal Gradianto' %}
+                        {% set clientDesignation = 'Co-founder of company name' %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed "../modules/p_testimonial_card.twig" %}
+                        {% set clientImage = '../../assets/images/pexels-photo-220453@2x.png' %}
+                        {% set clientMessage = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' %}
+                        {% set clientName = 'Rizal Gradianto' %}
+                        {% set clientDesignation = 'Co-founder of company name' %}
+                    {% endembed %}
+                </div>
+                <div>
+                    {% embed "../modules/p_testimonial_card.twig" %}
+                        {% set clientImage = '../../assets/images/pexels-photo-220453@2x.png' %}
+                        {% set clientMessage = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.' %}
+                        {% set clientName = 'Rizal Gradianto' %}
+                        {% set clientDesignation = 'Co-founder of company name' %}
+                    {% endembed %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+<h3>My Profile</h3>
+
+<div class="my-profile__container">
+  <div class="my-profile__image">
+    <img src="../../assets/images/profile.png" alt="">
+    <img src="../../assets/images/pencil.svg" alt="" id="editUserPic" class="icon-edit hide">
+  </div>
+  <div class="my-profile__details">
+    <h5>{{firstName}} {{lastName}}</h5>
+    <span>BBQN Points</span>
+    <span class="user-rewards align-center">
+      <img alt="" class="user-rewards--image" src="../../../assets/images/Image 2.png">
+      <span class="user-rewards--points">
+        {{points}}
+      </span>
+    </span>
+  </div>
+  <div class="my-profile__action">
+    <button class="button button--edit" id="edit-user">Edit</button>
+    <button class="button button--edit hide" id="save-user">Save Changes</button>
+  </div>
+</div>
+
+{# View Part of the Profile #}
+<div class="my-profile__container" id="profile-view">
+  <div class="my-profile__location">
+    <label>Location</label>
+    <p>{{location}}</p>
+  </div>
+  <div class="my-profile__mobile">
+    <label>Mobile Number</label>
+    <p>{{mobile}}</p>
+  </div>
+  <div class="my-profile__mail">
+    <label>Email</label>
+    <p>{{mail}}</p>
+  </div>
+  <div class="my-profile__birthday">
+    <label>Birthday</label>
+    <p>{{dob}}</p>
+  </div>
+  <div class="my-profile__anniversary">
+    <label>Anniversary</label>
+    <p>{{anniversary}}</p>
+  </div>
+</div>
+
+{# Edit Form of the Profile #}
+<div class="my-profile-edit__container hide" id="profile-edit">
+  <form no-validate auto-complete="off">
+    <div class="input-group">
+      <label>First Name</label>
+      <input class="custom-input" type="text" value="{{firstName}}">
+    </div>
+    <div class="input-group">
+      <label>Last Name</label>
+      <input class="custom-input" type="text" value="{{lastName}}">
+    </div>
+    <div class="input-group">
+      <label>Location</label>
+      <input class="custom-input" type="text" value="{{location}}">
+    </div>
+    <div class="input-group">
+      <label>Mobile Number</label>
+      <input class="custom-input" type="text" value="{{mobile}}">
+    </div>
+    <div class="input-group">
+      <label>Email</label>
+      <input class="custom-input" type="text" value="{{mail}}">
+    </div>
+    <div class="input-group">
+      <label>Birthday</label>
+      <input class="custom-input" type="text" value="{{dob}}">
+    </div>
+    <div class="input-group">
+      <label>Anniversary</label>
+      <input class="custom-input" type="text" value="{{anniversary}}">
+    </div>
+  </form>
+</div>

@@ -1,0 +1,16 @@
+<div class="paragraph__table-block">
+    <div class="layout-container">
+        <div class="paragraph__title">
+            {{ title }}
+        </div>
+        <div class="paragraph__subtitle">
+            {{ subtitle }}
+        </div>
+        <div class="paragraph__table-section">
+            {% embed "../modules/p_table_content.twig" %}
+                {% set header = 'Lorem Ipsum' %}
+                {% set data = 'BBQN' %}
+            {% endembed %}
+        </div>
+    </div>
+</div>

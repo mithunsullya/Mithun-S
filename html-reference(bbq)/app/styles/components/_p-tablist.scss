@@ -1,0 +1,235 @@
+.paragraph__tabs {
+  .paragraph__tablist {
+    margin-bottom: 40px;
+
+    .paragraph__title {
+      @include bp-xs-small {
+        font-size: 18px;
+      }
+
+      @include bp-medium {
+        font-size: 30px;
+      }
+
+      font-size: 30px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .paragraph__subtitle {
+      @include bp-xs-small {
+        font-size: 14px;
+      }
+
+      @include bp-medium {
+        font-size: 18px;
+      }
+
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+
+    .paragraph__tab-section {
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+      border-radius: 4px;
+
+      .paragraph__tab-panel {
+        ul {
+          @include bp-xs-small {
+            overflow: hidden;
+            overflow-x: scroll;
+            padding: 15px 25px;
+          }
+
+          @include bp-small {
+            overflow: hidden;
+            overflow-x: scroll;
+            padding: 15px 25px;
+          }
+
+          @include bp-medium {
+            overflow: auto;
+            padding: 25px 45px;
+          }
+
+          padding: 25px 45px;
+          border-bottom: 1px solid $color--white-smoke;
+
+          li {
+            margin-right: 15px;
+            display: inline-flex;
+
+            a {
+              @include bp-xs-small {
+                white-space: nowrap;
+                font-size: 10px;
+                padding: 6px 12px;
+              }
+
+              @include bp-small {
+                white-space: nowrap;
+              }
+
+              @include bp-medium {
+                white-space: nowrap;
+                font-size: 14px;
+                padding: 10px 20px;
+              }
+
+              border: 1px solid $color--submit-button;
+              color: $color--submit-button;
+              padding: 10px 20px;
+              border-radius: 30px;
+              text-transform: uppercase;
+              font-weight: 600;
+              transition: all 0.3s ease-in-out 0s;
+
+              &:hover {
+                background: $color--submit-button;
+                color: $color--white;
+              }
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .paragraph__tab-panel--block {
+          @include bp-xs-small {
+            padding: 15px 25px;
+            flex-direction: column-reverse;
+          }
+
+          @include bp-small {
+            padding: 25px 45px;
+            flex-direction: column-reverse;
+          }
+
+          @include bp-medium {
+            padding: 25px 45px;
+            flex-direction: row;
+          }
+
+          padding: 25px 45px;
+
+          .paragraph__tab-panel--left {
+            @include bp-xs-small {
+              width: 100%;
+              padding-right: 0;
+            }
+
+            @include bp-small {
+              width: 100%;
+              padding-right: 0;
+            }
+
+            @include bp-medium {
+              width: calc(100% - 510px);
+              padding-right: 80px;
+            }
+
+            width: calc(100% - 510px);
+            padding-right: 80px;
+
+            .paragraph__title {
+              @include bp-xs-small {
+                font-size: 14px;
+              }
+
+              @include bp-medium {
+                font-size: 20px;
+              }
+
+              font-size: 20px;
+              font-weight: 600;
+              margin-bottom: 15px;
+            }
+
+            .paragraph__content {
+              @include bp-xs-small {
+                font-weight: 300;
+                font-size: 12px;
+                line-height: 1.8;
+                opacity: 0.8;
+              }
+
+              @include bp-medium {
+                font-size: 14px;
+              }
+            }
+
+            .paragraph__cta {
+              @include bp-xs-small {
+                margin: 20px 0;
+              }
+
+              @include bp-medium {
+                margin: 40px 0 0;
+              }
+
+              margin-top: 40px;
+
+              a {
+                @include bp-xs-small {
+                  font-size: 10px;
+                }
+
+                @include bp-medium {
+                  font-size: 12px;
+                }
+
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: $color--label;
+                background: url(../../assets/images/repeat.svg) no-repeat;
+                background-size: 12px;
+                background-position: right center;
+                padding-right: 18px;
+                transition: padding-right 0.3s ease-in-out 0s;
+
+                &:hover {
+                  padding-right: 22px;
+                }
+              }
+            }
+          }
+
+          .paragraph__tab-panel--right {
+            @include bp-xs-small {
+              height: 240px;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            @include bp-small {
+              height: 340px;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            @include bp-medium {
+              height: 420px;
+              width: 510px;
+              margin-bottom: 0;
+            }
+
+            height: 420px;
+            width: 510px;
+            border-radius: 6px;
+            overflow: hidden;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

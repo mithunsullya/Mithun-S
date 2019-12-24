@@ -1,0 +1,24 @@
+<article class="card card--voucher">
+  <div class="card__media">
+    <img src="{{ card_image }}" alt="Voucher">
+  </div>
+  <div class="card__header">
+    <div class="unit">{{ card_header }}</div>
+    <div class="price">&#8377;{{ price }}</div>
+  </div>
+  <div class="card__footer">
+    <div class="atc">
+      <a href="#" class="button button--atc">Add to Cart</a>
+      <div class="card__footer__form-wrap">
+        <form class="form form--atc">
+          <div class="value-button" class="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+          <input type="text" class="number" value="0" readonly/>
+          <div class="value-button" class="increase" onclick="increaseValue()" value="Increase Value">+</div>
+        </form>
+      </div>
+    </div>
+    <div class="info">
+      <a href="#" class="open-dialog">More info</a>
+    </div>
+  </div>
+</article>

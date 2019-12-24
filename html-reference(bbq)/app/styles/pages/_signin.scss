@@ -1,0 +1,110 @@
+.signin {
+  width: 360px;
+  height: 570px;
+  text-align: center;
+  border-radius: 30px;
+  .close {
+    float: right;
+    text-align: right;
+  }
+  .logo {
+    max-width: 100px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+  }
+  h2 {
+    margin-bottom: 40px;
+    font-size: $font-size--xxl;
+  }
+}
+.form--signin,
+.form--signup {
+  margin-bottom: 50px;
+  padding: 0 30px;
+  text-align: left;
+  label {
+    position: relative;
+  }
+  .form__elem {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 12px;
+    border-radius: 50px;
+    background: transparentize($color--chico, 0.90);
+    select {
+      margin-right: 10px;
+      padding-right: 12px;
+      border: none;
+      background: transparent url("../assets/images/dropdown-black.svg") no-repeat right center/10px;
+      background-color: transparent;
+    }
+    input {
+      border: none;
+      background: none;
+    }
+  }
+  .button--submit,
+  .button--success {
+    width: 114%;
+    margin-right: -15px;
+    margin-bottom: 15px;
+    margin-left: -15px;
+    padding: 15px 20px;
+    border-radius: 50px;
+  }
+  .form__suffix {
+    font-size: $font-size--xs;
+    a {
+      color: $color--dodger-blue;
+    }
+  }
+}
+#timer {
+  float: right;
+  color: $color--dodger-blue;
+  font-size: 12px;
+}
+.form--signup {
+  display: none;
+}
+.sign__social {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  .sign__social__item {
+    width: 74px;
+    height: 38px;
+    margin: 0 8px;
+    border: 1px solid transparentize($color--black, 0.85);
+    border-radius: 50px;
+    line-height: 0.55;
+  }
+  .button--fb-login {
+    background: url("../assets/images/fb-login.svg") no-repeat center center/8px;
+  }
+  .button--insta-login {
+    background: url("../assets/images/insta-login.svg") no-repeat center center/16px;
+  }
+  .button--google-login {
+    background: url("../assets/images/g-login.svg") no-repeat center center/16px;
+  }
+}
+.signin__success {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  p {
+    margin-top: 20px;
+    font-size: $font-size--xxl;
+    font-weight: $font-weight--light;
+  }
+}

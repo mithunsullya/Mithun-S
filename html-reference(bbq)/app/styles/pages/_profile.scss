@@ -1,0 +1,467 @@
+.profile {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__left {
+    flex: 0 1 100%;
+    overflow-x: auto;
+
+    @include bp-large {
+      border-right: 1px solid $color--profile-border;
+      flex: 0 1 25%;
+      overflow-x: hidden;
+      padding-top: 50px;
+    }
+
+    .logout {
+      color: $color--primary !important;
+    }
+  }
+
+  &__right {
+    flex: 0 1 100%;
+
+    @include bp-large {
+      flex: 0 1 75%;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+
+  .tab {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+
+    @include bp-large {
+      padding: 0;
+      padding-left: 50px;
+    }
+
+    .tablinks {
+      @include bp-large {
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      border: none;
+      color: $color--profile-link;
+      cursor: pointer;
+      display: inline-block;
+      font: $font-size--base $font-family--primary;
+      font-weight: $font-weight--medium;
+      letter-spacing: 0.16px;
+      outline: none;
+      padding: 5px;
+      text-align: left;
+
+      &:hover {
+        color: $color--profile;
+        font-weight: $font-weight--bold;
+      }
+
+      &.active {
+        color: $color--profile;
+        font-weight: $font-weight--bold;
+        border-bottom: 3px solid $color--primary;
+
+        @include bp-large {
+          border-bottom: 0;
+          border-right: 3px solid $color--primary;
+        }
+      }
+    }
+
+  }
+
+  .leftTabContent,
+  .rightTabContent {
+    padding: 50px;
+
+    h3 {
+      color: $color--chico;
+      font: $font-size--xxl $font-family--primary;
+      font-weight: $font-weight--bold;
+      letter-spacing: 0.24px;
+      margin-bottom: 25px;
+
+      @include bp-xs-small {
+        text-align: center;
+      }
+    }
+  }
+
+  .leftTabContent {
+    .tab {
+      padding: 0;
+    }
+  }
+
+  .rightTabContent {
+    padding: 0;
+    padding-top: 40px;
+
+    @include bp-xs-small() {
+      padding: 40px;
+    }
+  }
+
+  .my-profile {
+    &__container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+
+      @include bp-xs-small {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .user-rewards {
+        padding: 5px 7px;
+
+        img {
+          margin: -4px 4px 0 0;
+        }
+
+        &--points {
+          color: $color--white;
+          font-weight: $font-weight--medium;
+        }
+      }
+
+      label {
+        color: $color--tertiary;
+        font: $font-size--base $font-family--primary;
+        font-weight: $font-weight--medium;
+        letter-spacing: 0.16px;
+        margin: 0;
+
+        @include bp-xs-small() {
+          justify-content: center;
+        }
+      }
+    }
+
+    &__image {
+      position: relative;
+
+      @include bp-small {
+        flex: 0 1 12%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .icon-edit {
+        width: 25px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+      }
+    }
+
+    &__details {
+      margin-top: 20px;
+
+      @include bp-small {
+        flex: 0 1 45%;
+        margin-top: 0;
+        margin-left: 30px;
+      }
+
+      span {
+        color: $color--tertiary;
+        font: $font-size--s $font-family--primary;
+        font-weight: $font-weight--medium;
+        letter-spacing: 0.14px;
+      }
+
+      h5 {
+        color: $color--title;
+        font: $font-size--xl $font-family--primary;
+        font-weight: $font-weight--bold;
+        margin-bottom: 10px;
+      }
+    }
+
+    &__action {
+      flex: 0 1 100%;
+      margin-top: 20px;
+
+      @include bp-small {
+        flex: 0 1 25%;
+        margin-top: 0;
+      }
+    }
+
+    &__location,
+    &__mobile,
+    &__birthday,
+    &__anniversary {
+      margin-top: 30px;
+      flex: 0 1 100%;
+
+      @include bp-small {
+        flex: 0 1 30%;
+
+      }
+
+      p {
+        color: $color--tertiary;
+        font: $font-size--base $font-family--primary;
+        font-weight: $font-weight--bold;
+      }
+    }
+
+    &__mail {
+      flex: 0 1 40%;
+      margin-top: 30px;
+
+      p {
+        color: $color--tertiary;
+        font: $font-size--base $font-family--primary;
+        font-weight: $font-weight--bold;
+      }
+    }
+
+  }
+
+  .my-profile-edit {
+    &__container {
+      .custom-input {
+        border-bottom: 1px solid $color--primary;
+        color: $color--tertiary;
+        font: $font-size--base $font-family--primary;
+        font-weight: $font-weight--bold;
+      }
+
+      form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .input-group {
+          margin-top: 35px;
+          flex: 0 1 33%;
+        }
+      }
+    }
+  }
+
+  .reservation {
+    &__container {
+      @include bp-xs-small {
+        padding: 0;
+        padding-top: 20px;
+      }
+
+      .tab {
+        padding-left: 10px;
+        border-bottom: 1px solid $color--profile-border;
+
+        @include bp-large {
+          padding-left: 0;
+        }
+
+        .tablinks {
+          display: inline-block;
+          margin-bottom: 0;
+          margin-right: 10px;
+
+          &.active {
+            border-right: 0;
+            border-bottom: 3px solid $color--primary;
+          }
+        }
+      }
+    }
+
+    &__card {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &--single {
+        flex: 0 1 100%;
+
+        @include bp-small {
+          flex: 0 1 48%;
+        }
+
+        @include bp-large {
+          flex: 0 1 32%;
+        }
+      }
+    }
+  }
+}
+
+.vouchers {
+  &__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &--single {
+      flex: 0 1 100%;
+
+      @include bp-small {
+        flex: 0 1 48%;
+      }
+
+      @include bp-large {
+        flex: 0 1 32%;
+      }
+    }
+  }
+}
+
+.loyalty {
+  @include bp-xs-small {
+    padding: 20px !important;
+  }
+
+  &__container {
+    text-align: center;
+    border: 1px solid $color--profile-border;
+    padding: 30px;
+
+    p {
+      margin-bottom: 20px;
+      color: $color--chico;
+      font: $font-size--base $font-family--primary;
+      font-weight: $font-weight--medium;
+      letter-spacing: 0.16px;
+    }
+
+    .user-rewards {
+      padding: 16px 25px;
+      border-radius: 50px;
+
+      img {
+        margin: 0 4px 11px 0px;
+      }
+
+      span {
+        font: $font-size--xl $font-family--primary;
+        font-weight: $font-weight--medium;
+      }
+    }
+
+    .points {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+
+      >div {
+        border: 1px solid $color--profile-border;
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 20px;
+
+        @include bp-small {
+          margin-top: 0px;
+          margin-left: 20px;
+        }
+
+        .user-rewards {
+          padding: 12px 10px;
+          margin-right: 10px;
+
+          img {
+            margin: 0px 4px 6px 0px;
+          }
+
+          span {
+            font: $font-size--xs $font-family--primary;
+          }
+        }
+      }
+
+      &--earned {
+        color: $color--earned;
+
+        .user-rewards {
+          background: $color--earned;
+        }
+      }
+
+      &--spent {
+        color: $color--secondary;
+
+        .user-rewards {
+          background: $color--secondary;
+        }
+      }
+
+    }
+  }
+
+  h4 {
+    color: $color--profile;
+    font: $font-size--base $font-family--primary;
+    font-weight: $font-weight--bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.table-responsive {
+  overflow: auto;
+}
+
+.transcation-table {
+  width: 100%;
+  border: 0;
+
+  thead {
+    tr {
+      background: $color--table-header;
+      font: $font-size--xs $font-family--primary;
+      font-weight: $font-weight--bold;
+      height: 45px;
+    }
+  }
+
+  tbody {
+    tr {
+      font: $font-size--xs $font-family--primary;
+      font-weight: $font-weight--medium;
+      border-bottom: 1px solid $color--profile-border;
+      color: $color--tertiary;
+
+      &:nth-of-type(even) {
+        background: $color--white;
+      }
+
+      td {
+        &:nth-child(2) {
+          color: $color--earned;
+        }
+
+        &:nth-child(3) {
+          color: $color--secondary;
+        }
+      }
+    }
+  }
+}

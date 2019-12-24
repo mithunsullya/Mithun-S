@@ -1,0 +1,90 @@
+<h3>My Reservations</h3>
+<div class="tab">
+  <a class="tablinks" href="javascript:void(0)" id="defaultReservation" data-target="upcoming" data-tag="rightTabContent">Upcoming Reservations</a>
+  <a class="tablinks" href="javascript:void(0)" data-target="past" data-tag="rightTabContent">Past Reservations</a>
+</div>
+
+<div id="upcoming" class="rightTabContent">
+  <div class="reservation__card">
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @Koramangala' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = false %}
+    {% endembed %}
+
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @Koramangala' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = false %}
+    {% endembed %}
+
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @Koramangala' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = false %}
+    {% endembed %}
+
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @EC' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = false %}
+    {% endembed %}
+  </div>
+</div>
+
+<div id="past" class="rightTabContent past-reservation">
+  <div class="reservation__card">
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @Koramangala' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = true %}
+    {% endembed %}
+
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @Koramangala' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = true %}
+    {% endembed %}
+
+    {% embed "./reservations_card.twig" %}
+      {% set title = 'Get Together @Koramangala' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set date = 'Tuesday, 01 Sep, 1:00pm' %}
+      {% set ref = '#BBQOO89221' %}
+      {% set bbqPoints = '1000' %}
+      {% set estimationCost = '1000' %}
+      {% set advancePayment = '1000' %}
+      {% set isPastReservation = true %}
+    {% endembed %}
+  </div>
+</div>

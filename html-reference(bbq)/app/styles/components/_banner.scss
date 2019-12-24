@@ -1,0 +1,16 @@
+.banner-block {
+  @include bp-large() {
+    max-height: 625px;
+    background-position: center -100px;
+  }
+  position: relative;
+  overflow: hidden;
+  background: $color--white-smoke url("../assets/images/Background.png") no-repeat;
+  background-position: center top;
+  .banner-content {
+    padding-top: 110px;
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 2;
+  }
+}

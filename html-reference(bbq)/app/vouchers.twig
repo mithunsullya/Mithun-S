@@ -1,0 +1,235 @@
+{% extends "src/layout/layout.twig" %}
+{% set pageName = 'Vouchers' %}
+
+{% block content %}
+  <div class="layout-container">
+    {% embed "src/partials/components/modules/breadcrumb.twig" %}
+      {% set items = {
+          '0': {
+            'crumb': 'Home',
+            'link': '/'
+          },
+          '1': {
+            'crumb': 'Vouchers',
+          },
+         }
+      %}
+    {% endembed %}
+  </div>
+  <section class="s-voucher l-wrapper">
+    <div class="s-voucher__header l-header">
+      <div class="layout-container row space-between">
+        <div class="header__filter hide-xs hide-sm">
+          <h3>Filter</h3>
+        </div>
+        <div class="header__result">
+          <h2>Vouchers for you</h2>
+        </div>
+        <div class="header__sort hide-xs hide-sm">
+          <label for="Sort">Sort by</label>
+          <select id="voucher-filter-sort-dropdown" name="sort" id="s-voucher-sort" name="Sort">
+            <option value="0">
+              <span>Price</span>
+              (Low to High)
+            </option>
+            <option value="1">
+              <span>Price</span>
+              (High to Low)
+            </option>
+            <option value="2">
+              <span>Relevance</span>
+            </option>
+          </select>
+        </div>
+        <div class="header__m-filter hide-md hide-xl">
+          <button class="button--icon button--m-filter">Filter</button>
+          <button class="button--icon button--m-sort button--m-sort--asc">Sort</button>
+        </div>
+      </div>
+    </div>
+    <div class="s-voucher__result l-result">
+      <div class="layout-container row">
+        <div class="s-voucher__filter l-filter">
+          <a id="clear-all-voucher-filters" href="#" class="clear-all-link">Clear All</a>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label>Price</label>
+              {% include "src/partials/components/includes/slider.twig" %}
+            </div>
+          </div>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label for="Location">Location</label>
+              <select id="country-filter-dropdown" name="Location" id="location" class="s-voucher__loc-dropdown"></select>
+              <div id="city-filter-select" class="s-voucher__branch-cb checkbox-list form-item"></div>
+            </div>
+          </div>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label>Branch</label>
+              <div id="branch-filter-select" class="s-voucher__loc-cb checkbox-list form-item"></div>
+            </div>
+          </div>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label>Treat Type</label>
+              <div id="treat-type-select" class="s-voucher__loc-cb checkbox-list form-item"></div>
+            </div>
+          </div>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label>Food Clasification</label>
+              <div id="food-classification-select" class="s-voucher__loc-cb checkbox-list form-item"></div>
+            </div>
+          </div>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label>Days of Week</label>
+              <div id="day-of-the-week-select" class="s-voucher__loc-cb checkbox-list form-item checkbox-list--expanded"></div>
+            </div>
+          </div>
+          <div class="s-voucher__filter-elem-wrap">
+            <div class="s-voucher__filter-elem">
+              <label>Voucher Type</label>
+              <div id="voucher-type-select" class="s-voucher__loc-cb checkbox-list form-item"></div>
+            </div>
+          </div>
+          <div class="s-voucher__submit l-filter__submit hide-md hide-xl">
+            <button class="button button--submit">Apply</button>
+            <button class="button button--submit button--outline">Cancel</button>
+          </div>
+        </div>
+        <div class="s-voucher__view-wrap">
+          <div class="s-voucher__view" id="voucher-list">
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v1.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v2.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v3.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v4.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v5.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v1.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v2.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v3.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v4.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v5.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v1.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v2.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v3.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v4.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v5.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v1.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v2.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v3.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v4.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v5.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v1.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v2.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v3.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+{#            {% embed "src/partials/components/modules/voucher_card.twig" %}#}
+{#              {% set card_image = "../assets/images/v4.png" %}#}
+{#              {% set card_header = "Meal for four" %}#}
+{#              {% set price = "3200" %}#}
+{#            {% endembed %}#}
+          </div>
+          <div class="pager pager--loadmore" id="filter-load-more">
+            <button id="filter-load-more-button" class="button button--loadmore button--outline">Load More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% include "src/partials/components/includes/redeem.twig" %}
+  <div id="dialog" title="More Details About Voucher"></div>
+  <script type="text/javascript" src="scripts/voucher-listing.js" defer='defer'></script>
+{% endblock %}

@@ -1,0 +1,54 @@
+<section class="profile">
+  <div class="profile__container">
+    <div class="profile__left">
+      <div class="tab">
+        <a class="tablinks" href="javascript:void(0)" data-target="profile" data-tag="leftTabContent" id="defaultOpen">
+          <img src="../../assets/images/user.svg" alt="" class="profile__icon">
+          My Profile
+        </a>
+        <a class="tablinks" href="javascript:void(0)" data-target="reservation" data-tag="leftTabContent">
+          <img src="../../assets/images/Untitled-1-08.svg" alt="" class="profile__icon">
+          My Reservations
+        </a>
+        <a class="tablinks" href="javascript:void(0)" data-target="loyalty" data-tag="leftTabContent">
+          <img src="../../assets/images/Untitled-1-29.svg" alt="" class="profile__icon">
+          BBQN Loyalty Points
+        </a>
+        <a class="tablinks" href="javascript:void(0)" data-target="vouchers" data-tag="leftTabContent">
+          <img src="../../assets/images/Untitled-1-08.svg" alt="" class="profile__icon">
+          My Vouchers & Coupons
+        </a>
+        <a class="tablinks logout" href="javascript:void(0)">
+          <img src="../../assets/images/logout.svg" alt="" class="profile__icon">
+          Logout
+        </a>
+      </div>
+    </div>
+    <div class="profile__right">
+      <div id="profile" class="leftTabContent">
+        {% embed "../modules/my_profile.twig" %}
+          {% set firstName = 'Leo' %}
+          {% set lastName = 'Mechile ' %}
+          {% set points = 1000 %}
+          {% set location = 'Bangalore, India' %}
+          {% set mobile = '+91 9876543210' %}
+          {% set mail = 'leomechile@gmail.com' %}
+          {% set dob = '24/07/2008' %}
+          {% set anniversary = '24/07/2008' %}
+        {% endembed %}
+      </div>
+
+      <div id="reservation" class="leftTabContent reservation__container">
+        {% embed "../modules/my_reservations.twig" %}{% endembed %}
+      </div>
+
+      <div id="loyalty" class="leftTabContent loyalty">
+        {% embed "../modules/loyalty_points.twig" %}{% endembed %}
+      </div>
+
+      <div id="vouchers" class="leftTabContent reservation__container">
+        {% embed "../modules/vouchers_coupons.twig" %}{% endembed %}
+      </div>
+    </div>
+  </div>
+</section>

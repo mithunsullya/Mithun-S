@@ -1,0 +1,48 @@
+<div class="paragraph__client-block">
+    <div class="layout-container">
+        {% if title != NULL %}
+            <div class="paragraph__title">
+                {{ title }}
+            </div>
+        {% endif %}
+        {% if subtitle != NULL %}
+            <div class="paragraph__subtitle">
+                {{ subtitle }}
+            </div>
+        {% endif %}
+        <div class="paragraph__client-section row">
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+            {% embed "../modules/p_client_card.twig" %}
+                {% set clientImage = '../../assets/images/Image-41@2x.png' %}
+                {% set clientName = 'Ameris Bancorp' %}
+            {% endembed %}
+        </div>
+    </div>
+</div>

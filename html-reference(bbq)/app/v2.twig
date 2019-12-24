@@ -1,0 +1,12 @@
+{# index.twig #}
+{% extends "src/layout/layout.twig" %}
+{% set pageName = 'Homepage' %}
+
+{% block content %}
+  {% include "src/partials/components/includes/banner_gradient.twig" %}
+  {% include "src/partials/components/includes/vouchers-block.twig" %}
+  {% include "src/partials/components/includes/events.twig" %}
+  {% include "src/partials/components/includes/nearby-outlets.twig" %}
+  {% include "src/partials/components/includes/updates.twig" %}
+  {% include "src/partials/components/includes/reservation_info.twig" %}
+{% endblock %}

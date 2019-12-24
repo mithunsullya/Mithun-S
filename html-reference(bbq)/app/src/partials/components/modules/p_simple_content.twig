@@ -1,0 +1,45 @@
+<div class="paragraph__simple-content">
+    {% if title != NULL %}
+        <h3 class="paragraph__title">
+            {{ title }}
+        </h3>
+    {% endif %}
+    {% if subtitle != NULL %}
+        <div class="paragraph__subtitle">
+            {{ subtitle }}
+        </div>
+    {% endif %}
+    <div class="paragraph__content">
+        {% if content != NULL %}
+            <p>
+                {{ content }}
+            </p>
+        {% endif %}
+        {% if unorderedList != NULL %}
+            <ul>
+                <li>
+                    {{ unorderedList }}
+                </li>
+            </ul>
+        {% endif %}
+        {% if orderedList != NULL %}
+            <ol>
+                <li>
+                    {{ orderedList }}
+                </li>
+            </ol>
+        {% endif %}
+    </div>
+    {% if imageURL != NULL %}
+        <div class="paragraph__image">
+            <img src="{{ imageURL }}" alt="">
+        </div>
+    {% endif %}
+    {% if ctaText != NULL %}
+        <div class="paragraph__cta">
+            <a href="{{ ctaURL }}">
+                {{ ctaText }}
+            </a>
+        </div>
+    {% endif %}
+</div>

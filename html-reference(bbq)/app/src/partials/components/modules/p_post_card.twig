@@ -1,0 +1,32 @@
+<div class="paragraph__post-card">
+    <div class="paragraph__post-card--image">
+        <img src="{{ imgURL }}" alt="">
+    </div>
+    <div class="paragraph__post-card--details">
+        {% if date != NULL %}
+            <div class="paragraph__date">
+                {{ date }}
+            </div>
+        {% endif %}
+        {% if postTitle != NULL %}
+            <div class="paragraph__title">
+                {{ postTitle }}
+            </div>
+        {% endif %}
+        {% if postContent != NULL %}
+            <div class="paragraph__content">
+                {{ postContent }}
+            </div>
+        {% endif %}
+        {% if ctaURL != NULL %}
+            {% if ctaText != NULL %}
+                <div class="paragraph__cta">
+                    <a href="{{ ctaURL }}">
+                        {{ ctaText }}
+                    </a>
+                </div>
+            {% endif %}
+        {% endif %}
+
+    </div>
+</div>

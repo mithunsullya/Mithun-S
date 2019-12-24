@@ -1,0 +1,23 @@
+{# cms.twig #}
+{% extends "src/layout/layout.twig" %}
+{% set pageName = 'CMS' %}
+
+{% block content %}
+  {% include "src/partials/components/includes/p_banner.twig" %}
+  <div class="main-wrapper">
+    {% include "src/partials/components/includes/p_content_block.twig" %}
+    {% include "src/partials/components/includes/p_thumb_block.twig" %}
+    {% include "src/partials/components/includes/p_content_column.twig" %}
+    {% include "src/partials/components/includes/p_posts.twig" %}
+    {% include "src/partials/components/includes/p_stack.twig" %}
+    {% include "src/partials/components/includes/p_grid_cards.twig" %}
+    {% include "src/partials/components/includes/p_tabs.twig" %}
+    {% include "src/partials/components/includes/p_thumb_block.twig" %}
+    {% include "src/partials/components/includes/p_accordion.twig" %}
+    {% include "src/partials/components/includes/p_table.twig" %}
+    {% include "src/partials/components/includes/p_clients.twig" %}
+    {% include "src/partials/components/includes/p_testimonials.twig" %}
+    {% include "src/partials/components/includes/p_timeline.twig" %}
+    {% include "src/partials/components/includes/p_gallery.twig" %}
+  </div>
+{% endblock %}

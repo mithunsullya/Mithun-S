@@ -1,0 +1,222 @@
+.show-cart {
+  @include bp-xs-small() {
+    margin-right: 30px;
+  }
+
+  @include bp-medium() {
+    margin-right: 35px;
+  }
+
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 35px;
+  cursor: pointer;
+  background: url("../assets/images/shopping-cart.svg") no-repeat center center;
+  background-size: 20px;
+
+  .count {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    width: 14px;
+    height: 14px;
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background: #fc4412;
+    font-size: 10px;
+  }
+}
+
+.cart--curtain {
+  @include transition($transition-time--base all ease-in-out);
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  visibility: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: $color--gradient-black;
+
+  &.cart--visible {
+    z-index: 10;
+    visibility: visible;
+    opacity: 1;
+
+    .cart__block {
+      right: 0;
+    }
+  }
+
+  .cart__block {
+    @include transition($transition-time--base all ease-in-out);
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: -435px;
+    overflow: scroll;
+    width: 435px;
+    max-width: 100%;
+    height: 100%;
+    padding: 36px 28px;
+    background: $color--alice-blue;
+  }
+
+  .cart__heading {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .title {
+      margin-bottom: 32px;
+      text-transform: uppercase;
+      font-size: $font-size--base;
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  .cart__items {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $color--feldspar;
+  }
+
+  .cart__item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px transparentize($color--black, 0.95);
+
+    >img {
+      max-width: 68px;
+      margin-right: 14px;
+    }
+
+    .cart__item__title {
+      width: 200px;
+
+      >h5 {
+        font-size: $font-size--xs;
+        font-weight: $font-weight--bold;
+      }
+
+      >span {
+        font-size: $font-size--s;
+      }
+    }
+
+    .cart__item__form-wrap {
+      position: relative;
+      margin-right: 30px;
+      margin-left: 10px;
+    }
+
+    .form--cart {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 10px;
+      border: 1px solid $color--primary;
+      border-radius: 32px;
+
+      >input {
+        width: 32px;
+        text-align: center;
+        border: none;
+      }
+    }
+  }
+
+  .cart__sub-total {
+
+    .subtotal,
+    .gst {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      padding: 0 17px;
+    }
+  }
+
+  .cart__discount {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 17px 0 45px;
+    background: url("../assets/images/bbq-small.svg") no-repeat 17px top;
+    background-size: 20px;
+
+    .left {
+      flex: 0 0 220px;
+
+      >.heading {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        .remove-link {
+          margin-left: 6px;
+          padding: 2px 8px;
+          color: $color--tawny-brown;
+          border-radius: 10px;
+          background: $color--karry;
+        }
+      }
+
+      >span,
+      a {
+        font-size: $font-size--xxs;
+      }
+
+      a {
+        color: $color--dodger-blue;
+      }
+    }
+
+    .right {
+      color: $color--dodger-blue;
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  .cart__total {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 32px -28px 16px -28px;
+    padding: 25px 45px;
+    background: $color--karry;
+
+    span {
+      font-size: $font-size--xl;
+      font-weight: $font-weight--bold;
+    }
+  }
+
+  .cart__tnc {
+    padding: 0 17px;
+    font-size: $font-size--xs;
+
+    a {
+      color: $color--dodger-blue;
+    }
+  }
+
+  .button {
+    display: block;
+    margin: 42px auto 20px auto;
+  }
+}

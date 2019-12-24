@@ -1,0 +1,88 @@
+<div class="form--banner">
+    <div class="form--banner-title">
+        {{ title }}
+    </div>
+    <div class="form--banner-description">
+        {{ description }}
+    </div>
+    <form>
+        <div class="input--group">
+            <label>
+                Location
+            </label>
+            <div class="input--select-custom">
+                <select class="location--select js-states form-control">
+                    <optgroup label="Bangalore">
+                        <option value="0">Select location</option>
+                        <option value="1">Koramangala</option>
+                        <option value="2">Residency Road</option>
+                        <option value="3">Electronic City</option>
+                        <option value="4">HSR Layout</option>
+                        <option value="5">Indiranagar</option>
+                        <option value="6">Kalyannagar</option>
+                        <option value="7">Malleshwaram</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <div class="input--group">
+            <div class="input--group-pick row align-end space-between">
+                <div class="input--group-pick--grid">
+                    <label>
+                        Date
+                    </label>
+                    <div class="radio--custom">
+                        <input checked="checked" id="today" name="date" type="radio">
+                        <label for="today">Today</label>
+
+                        <input id="tomorrow" name="date" type="radio">
+                        <label for="tomorrow">Tomorrow</label>
+                    </div>
+                </div>
+                <div class="input--group-pick--grid">
+                    <div class="datepicker">
+                        <input type="text" name="datepicker" id="datepicker" placeholder="Pick a date">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input--group">
+            <div class="input--group-pick row align-end space-between">
+                <div class="input--group-pick--grid">
+                    <label>
+                        Session
+                    </label>
+                    <div class="radio--custom">
+                        <input checked="checked" id="lunch" name="session" type="radio">
+                        <label for="lunch">Lunch</label>
+
+                        <input id="dinner" name="session" type="radio">
+                        <label for="dinner">Dinner</label>
+                    </div>
+                </div>
+                <div class="input--group-pick--grid">
+                    <label>
+                        Choose Time
+                    </label>
+                    <div class="datepicker">
+                        <div class="input--select-custom">
+                            <select class="location--select js-states form-control">
+                                <option value="0">HH:MM</option>
+                                <option value="1">12:00PM</option>
+                                <option value="2">12:30PM</option>
+                                <option value="3">01:00PM</option>
+                                <option value="4">01:30PM</option>
+                                <option value="5">02:00PM</option>
+                                <option value="6">02:30PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input--group-button">
+            <input type="submit" value="Reserve Table" class="show-reservation">
+            <div class="input--group-button--beat"></div>
+        </div>
+    </form>
+</div>

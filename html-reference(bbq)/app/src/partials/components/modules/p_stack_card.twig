@@ -1,0 +1,38 @@
+{% if stackSize == 'stack-lg' %}
+    {% set stackSize = 'paragraph__stack--lg' %}
+{% endif %}
+
+
+<div class="paragraph__stack-card {{ stackSize }} row">
+    <div class="paragraph__stack-card--left row">
+        {% if imgURL != NULL %}
+            <div class="paragraph__stack-card--image">
+                <img src="{{ imgURL }}" alt="">
+            </div>
+        {% endif %}
+        <div class="paragraph__stack-card--details">
+            {% if stackTitle != NULL %}
+                <div class="paragraph__title">
+                    {{ stackTitle }}
+                </div>
+            {% endif %}
+            {% if stackContent != NULL %}
+                <div class="paragraph__content">
+                    {{ stackContent }}
+                </div>
+            {% endif %}
+
+        </div>
+    </div>
+    {% if ctaURL != NULL %}
+        {% if ctaText != NULL %}
+            <div class="paragraph__stack-card--right">
+                <div class="paragraph__cta">
+                    <a href="{{ ctaURL }}">
+                        {{ ctaText }}
+                    </a>
+                </div>
+            </div>
+        {% endif %}
+    {% endif %}
+</div>

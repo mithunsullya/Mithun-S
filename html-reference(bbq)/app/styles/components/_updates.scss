@@ -1,0 +1,33 @@
+.updates {
+  &--block {
+    padding: 60px 0 0;
+
+    @include bp-xs-small() {
+      padding: 40px 0;
+    }
+
+    @include bp-small() {
+      padding: 40px 0 0;
+    }
+  }
+
+  &-carousel {
+    margin-top: 15px;
+
+    @include bp-xs-small() {
+      margin-bottom: 0 !important;
+    }
+
+    @include bp-small() {
+      margin-bottom: 0 !important;
+    }
+
+    .slick {
+      &-slide {
+        >div {
+          padding: 15px 20px;
+        }
+      }
+    }
+  }
+}

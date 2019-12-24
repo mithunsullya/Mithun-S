@@ -1,0 +1,44 @@
+<div class="paragraph paragraph__banner">
+    <div class="paragraph__banner-carousel">
+        <div>
+            {% embed "../modules/p_banner_slider.twig" %}
+                {% set title = 'Let us serve you better' %}
+                {% set subTitle = 'Let us serve you better' %}
+                {% set ctaLink = 'index.html' %}
+                {% set ctaText = 'Know More' %}
+                {% set mediaURL = '../../assets/images/Background.png' %}
+            {% endembed %}
+        </div>
+        <div>
+            {% embed "../modules/p_banner_slider.twig" %}
+                {% set title = 'Lorem ipsum dolor sit amet' %}
+                {% set subTitle = 'Lorem ipsum dolor sit amet' %}
+                {% set ctaLink = 'index.html' %}
+                {% set ctaText = 'Know More' %}
+                {% set mediaURL = '../../assets/images/Mask Group 4.jpg' %}
+            {% endembed %}
+        </div>
+        <div>
+            {% embed "../modules/p_banner_slider.twig" %}
+                {% set title = 'Lorem ipsum dolor sit amet' %}
+                {% set subTitle = 'Lorem ipsum dolor sit amet' %}
+                {% set ctaLink = 'index.html' %}
+                {% set ctaText = 'Know More' %}
+                {% set mediaURL = '../../assets/images/Mask Group 5.jpg' %}
+            {% endembed %}
+        </div>
+    </div>
+    <div class="paragraph__banner-carousel">
+        <div>
+            {% embed "../modules/p_banner_slider.twig" %}
+                {% set mediaType = 'video' %}
+                {% set title = 'Lorem ipsum dolor sit amet' %}
+                {% set subTitle = 'Lorem ipsum dolor sit amet' %}
+                {% set ctaLink = 'index.html' %}
+                {% set ctaText = 'Know More' %}
+                {% set mediaURL = '../../assets/images/bbq.mp4' %}
+                {# {% set mediaURL = '../../assets/images/Background.png' %} #}
+            {% endembed %}
+        </div>
+    </div>
+</div>

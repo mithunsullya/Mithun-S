@@ -1,0 +1,46 @@
+<div class="nearbyOutlets--card">
+  <div class="nearbyOutlets--card-details">
+    <div class="nearbyOutlets--card-details--location">
+      {{ location }}
+    </div>
+    <div class="nearbyOutlets--card-details--address">
+      {{ address }}
+    </div>
+    <div class="nearbyOutlets--card-details--options">
+      <ul class="row">
+        <li>
+          <a href="{{ discountURL }}">
+            <img src="../assets/images/offer.svg" alt="">
+            <span>Offer</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ menuURL }}">
+            <img src="../assets/images/menu01.svg" alt="">
+            <span>Menu</span>
+          </a>
+        </li>
+        <li>
+          <a href="{{ navigationURL }}">
+            <img src="../assets/images/map.svg" alt="">
+            <span>Map</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="nearbyOutlets--card-details--link">
+      <a href="{{ linkURL }}" title="">
+        Explore
+        <span class="viewMore"></span>
+      </a>
+    </div>
+    <div class="nearbyOutlets--card-details--cta">
+      <a href="{{ ctaURL }}" title="">
+        {{ ctaText }}
+      </a>
+    </div>
+  </div>
+  <div class="nearbyOutlets--card-image">
+    <img src="{{ image }}" alt="">
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<h3>My Vouchers & Coupons</h3>
+<div class="tab">
+  <a class="tablinks" href="javascript:void(0)" id="defaultVouchers" data-target="my_voucher" data-tag="vouchers_coupons_container">My Vouchers</a>
+  <a class="tablinks" href="javascript:void(0)" data-target="coupons" data-tag="vouchers_coupons_container">My Coupons</a>
+</div>
+
+<div id="my_voucher" class="rightTabContent vouchers_coupons_container">
+  <div class="vouchers__card">
+    {% embed "./my_vouchers_card.twig" %}
+      {% set title = 'Meal for four' %}
+      {% set price = '₹3200' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set code = 'BBQOO89221' %}
+      {% set validty = 'This voucher valid until 12 December 2020' %}
+      {% set status = 'active' %}
+      {% set giftBy = 'Gifted By @Jacson Lopus' %}
+    {% endembed %}
+
+    {% embed "./my_vouchers_card.twig" %}
+      {% set title = 'Meal for four' %}
+      {% set price = '₹3200' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set code = 'BBQOO89221' %}
+      {% set validty = 'This voucher valid until 12 December 2020' %}
+      {% set status = 'gift' %}
+      {% set giftBy = 'Gifted By @Jacson Lopus' %}
+    {% endembed %}
+
+    {% embed "./my_vouchers_card.twig" %}
+      {% set title = 'Meal for four' %}
+      {% set price = '₹3200' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set code = 'BBQOO89221' %}
+      {% set validty = 'This voucher valid until 12 December 2020' %}
+      {% set status = 'used' %}
+      {% set giftBy = 'Gifted By @Jacson Lopus' %}
+    {% endembed %}
+
+
+  </div>
+</div>
+
+<div id="coupons" class="rightTabContent vouchers_coupons_container">
+  <div class="reservation__card">
+    {% embed "./my_vouchers_card.twig" %}
+      {% set title = 'Meal for four' %}
+      {% set price = '₹3200' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set code = 'BBQOO89221' %}
+      {% set validty = 'This voucher valid until 12 December 2020' %}
+      {% set status = 'used' %}
+      {% set giftBy = 'Gifted By @Jacson Lopus' %}
+    {% endembed %}
+
+    {% embed "./my_vouchers_card.twig" %}
+      {% set title = 'Meal for four' %}
+      {% set price = '₹3200' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set code = 'BBQOO89221' %}
+      {% set validty = 'This voucher valid until 12 December 2020' %}
+      {% set status = 'used' %}
+      {% set giftBy = 'Gifted By @Jacson Lopus' %}
+    {% endembed %}
+
+    {% embed "./my_vouchers_card.twig" %}
+      {% set title = 'Meal for four' %}
+      {% set price = '₹3200' %}
+      {% set image = '../assets/images/BBQ Nation 20180808 (7)-min.png' %}
+      {% set code = 'BBQOO89221' %}
+      {% set validty = 'This voucher valid until 12 December 2020' %}
+      {% set status = 'used' %}
+      {% set giftBy = 'Gifted By @Jacson Lopus' %}
+    {% endembed %}
+  </div>
+</div>

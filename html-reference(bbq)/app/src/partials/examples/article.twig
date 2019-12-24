@@ -1,0 +1,24 @@
+<article role="article" typeof="schema:Article" class="article article--type-{{ article_type }}" id="{{ article_id }}">
+  {% block article %}
+  <div class="article__media">
+    <a href="#">
+      <figure>
+        <img src="{{ article_media }}">
+      </figure>
+    </a>
+  </div>
+  <div class="article__content">
+    <h3 class="article__title">{{ article_title }}</h3>
+    <div class="article__meta">
+      Submitted by 
+        <span rel="schema:author">
+          <a href="#" typeof="schema:Person" property="schema:name" class="username">{{ article_author }}</a>
+        </span>, 
+        <span property="schema:dateCreated" content="{{ now|date("Y-m-dTh:m:s") }}">
+          {{ now|date("D m, Y") }}
+        </span>
+    </div>
+    <p>{{ article_content }}</p>
+  </div>
+  {% endblock %}
+</article>

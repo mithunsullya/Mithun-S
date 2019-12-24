@@ -1,0 +1,138 @@
+.paragraph__gallery {
+  .paragraph__gallery-block {
+    @include bp-xs-small {
+      margin-bottom: 50px;
+    }
+
+    @include bp-small {
+      margin-bottom: 50px;
+    }
+
+    @include bp-medium {
+      margin-bottom: 100px;
+    }
+
+    margin-bottom: 100px;
+
+    .paragraph__gallery-slider {
+      @include bp-xs-small {
+        width: 100%;
+        height: 240px;
+      }
+
+      @include bp-small {
+        width: 100%;
+        height: 340px;
+      }
+
+      @include bp-medium {
+        width: 860px;
+        height: 490px;
+      }
+
+      margin: 0 auto;
+      width: 860px;
+      height: 490px;
+      margin-bottom: 20px;
+
+      .slick-list {
+        width: 100%;
+        margin: 0 !important;
+
+        .paragraph__gallery-image {
+          @include bp-xs-small {
+            width: 100%;
+            height: 240px;
+          }
+
+          @include bp-small {
+            width: 100%;
+            height: 340px;
+          }
+
+          @include bp-medium {
+            width: 860px;
+            height: 490px;
+          }
+
+          width: 860px;
+          height: 490px;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+
+      .slick-next {
+        right: -100px;
+        height: 60px;
+        width: 30px;
+      }
+
+      .slick-prev {
+        left: -100px;
+        height: 60px;
+        width: 30px;
+      }
+
+      .slick-next:before,
+      .slick-prev:before {
+        color: $color--chico;
+        content: "";
+        height: 60px;
+        width: 30px;
+        background: url('../../assets/images/Path\ 22.svg') no-repeat center;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .slick-prev:before {
+        transform: rotate(180deg);
+      }
+    }
+
+    .paragraph__gallery-nav {
+      @include bp-xs-small {
+        width: 100%;
+      }
+
+      @include bp-medium {
+        width: 460px;
+      }
+
+      width: 460px;
+      margin: 0 auto;
+
+      .slick-list {
+        margin: 0 !important;
+      }
+
+      .slick-slide {
+        opacity: 0.6;
+        transition: opacity 0.3s ease-in-out 0s;
+
+        &.is-active {
+          opacity: 1;
+        }
+      }
+
+      .paragraph__gallery-image {
+        padding: 0px 3px;
+        height: 60px;
+        cursor: pointer;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

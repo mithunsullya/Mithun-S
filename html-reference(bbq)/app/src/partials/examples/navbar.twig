@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <div class="navbar__branding">
+    <a href="" class="navbar__branding__logo">
+      <img src="../../../assets/images/logo_b.png" alt="Logo" width="50">
+    </a>
+    <div class="navbar__branfing__text">
+      <div class="navbar__branding__name">
+        <a href="" title="Home">Specbee</a>
+      </div>
+      {#<div class="navbar__branding__slogan">HTML Boilerplate</div>#}
+    </div>
+  </div>
+  <div class="navbar__toggler">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="navbar__collapse">
+    {% include "menu.twig" %}
+    <div class="navbar__collapse__item">
+      <form class="form form--inline">
+        <div class="form__item">
+          <input type="text" class="form__input" placeholder="Enter your text">
+        </div>
+        <div class="form__item">
+          <button class="button button--small">Search</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</nav>

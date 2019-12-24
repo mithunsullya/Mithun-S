@@ -1,0 +1,76 @@
+<div class="nearbyOutlets">
+  <div class="layout-container row align-center">
+    <div class="nearbyOutlets--content">
+      <div class="nearbyOutlets--content-title">
+        Explore Nearby Outlets
+      </div>
+      <div class="nearbyOutlets--content-description">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+      </div>
+      <div class="nearbyOutlets--content-link">
+        <a href="">
+          View all locations
+          <span class="viewMore"></span>
+        </a>
+      </div>
+    </div>
+    <div class="nearbyOutlets--block row align-center space-evenly">
+      <div class="nearbyOutlets-carousel">
+        <div>
+          {% embed "../modules/nearby-card.twig" %}
+            {% set location = 'Indiranagar' %}
+            {% set address = 'Indiranagar 100 FT Road' %}
+            {% set discountURL = '' %}
+            {% set menuURL = '' %}
+            {% set navigationURL = '' %}
+            {% set linkURL = '' %}
+            {% set linkText = 'Explore' %}
+            {% set ctaURL = '#' %}
+            {% set ctaText = 'Reserve table' %}
+            {% set image = '../assets/images/live-grill.png' %}
+          {% endembed %}
+        </div>
+        <div>
+          {% embed "../modules/nearby-card.twig" %}
+            {% set location = 'Indiranagar' %}
+            {% set address = 'Indiranagar 100 FT Road' %}
+            {% set discountURL = '' %}
+            {% set discountIcon = '' %}
+            {% set discountText = 'Off' %}
+            {% set menuURL = '' %}
+            {% set menuIcon = '' %}
+            {% set menuText = 'Menu' %}
+            {% set navigationURL = '' %}
+            {% set navigationIcon = '' %}
+            {% set navigationText = 'Nav' %}
+            {% set linkURL = '' %}
+            {% set linkText = 'Explore' %}
+            {% set ctaURL = '' %}
+            {% set ctaText = 'Reserve table' %}
+            {% set image = '../assets/images/live-grill.png' %}
+          {% endembed %}
+        </div>
+        <div>
+          {% embed "../modules/nearby-card.twig" %}
+            {% set location = 'Indiranagar' %}
+            {% set address = 'Indiranagar 100 FT Road' %}
+            {% set discountURL = '' %}
+            {% set discountIcon = '' %}
+            {% set discountText = 'Off' %}
+            {% set menuURL = '' %}
+            {% set menuIcon = '' %}
+            {% set menuText = 'Menu' %}
+            {% set navigationURL = '' %}
+            {% set navigationIcon = '' %}
+            {% set navigationText = 'Nav' %}
+            {% set linkURL = '' %}
+            {% set linkText = 'Explore' %}
+            {% set ctaURL = '' %}
+            {% set ctaText = 'Reserve table' %}
+            {% set image = '../assets/images/live-grill.png' %}
+          {% endembed %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

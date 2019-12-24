@@ -1,0 +1,17 @@
+{# index.twig #}
+{% extends "src/layout/layout.twig" %}
+{% set pageName = 'Homepage' %}
+
+{% block header %}
+  {% include "src/partials/components/includes/header_anonymous.twig" %}
+{% endblock %}
+
+{% block content %}
+  {% include "src/partials/components/includes/banner.twig" %}
+  {% include "src/partials/components/includes/vouchers-block.twig" %}
+  {% include "src/partials/components/includes/events.twig" %}
+  {% include "src/partials/components/includes/nearby-outlets.twig" %}
+  {% include "src/partials/components/includes/updates.twig" %}
+  {# {% include "src/partials/components/includes/reservation_info.twig" %} #}
+  {% include "src/partials/components/includes/menu_wrap.twig" %}
+{% endblock %}

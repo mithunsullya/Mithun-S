@@ -1,0 +1,23 @@
+<div class="paragraph__tablist">
+    <div class="layout-container">
+        <div class="paragraph__title">
+            {{ title }}
+        </div>
+        <div class="paragraph__subtitle">
+            {{ subtitle }}
+        </div>
+        <div class="paragraph__tab-section">
+            {% embed "../modules/p_tab_panel.twig" %}
+                {% set tab1 = 'Lorem Ipsum 1' %}
+                {% set tab2 = 'Lorem Ipsum 2' %}
+                {% set tab3 = 'Lorem Ipsum 3' %}
+                {% set tab4 = 'Lorem Ipsum 4' %}
+                {% set tabTitle = 'Lorem ipsum dolor sit amet, consetetur' %}
+                {% set tabContent = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.' %}
+                {% set ctaURL = 'index.html' %}
+                {% set ctaText = 'More Info' %}
+                {% set imgURL = '../../assets/images/5751d06d612fb.image.png' %}
+            {% endembed %}
+        </div>
+    </div>
+</div>
