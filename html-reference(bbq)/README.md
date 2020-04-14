@@ -10,7 +10,7 @@ A webapp scaffolding based out of Yeoman webapp Generator [https://github.com/ye
 
 ### Installation
 ```
-git clone git@github.com:malabya/webapp.git
+git clone git@github.com:mithun/webapp.git
 cd webapp
 npm install
 bower install
